@@ -15,6 +15,8 @@
 		5A867DD5223648B600011ECA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A867DD4223648B600011ECA /* main.m */; };
 		5A867DDF223648B700011ECA /* TestUIViewAnimationCPUEnergyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A867DDE223648B700011ECA /* TestUIViewAnimationCPUEnergyTests.m */; };
 		5A867DEA223648B700011ECA /* TestUIViewAnimationCPUEnergyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A867DE9223648B700011ECA /* TestUIViewAnimationCPUEnergyUITests.m */; };
+		5A867DFC2236491F00011ECA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A867DFB2236491F00011ECA /* FirstViewController.m */; };
+		5A867DFF2236492700011ECA /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A867DFE2236492700011ECA /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		5A867DE5223648B700011ECA /* TestUIViewAnimationCPUEnergyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestUIViewAnimationCPUEnergyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A867DE9223648B700011ECA /* TestUIViewAnimationCPUEnergyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestUIViewAnimationCPUEnergyUITests.m; sourceTree = "<group>"; };
 		5A867DEB223648B700011ECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A867DFA2236491F00011ECA /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		5A867DFB2236491F00011ECA /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		5A867DFD2236492700011ECA /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		5A867DFE2236492700011ECA /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,10 @@
 				5A867DC6223648B500011ECA /* AppDelegate.m */,
 				5A867DC8223648B500011ECA /* ViewController.h */,
 				5A867DC9223648B500011ECA /* ViewController.m */,
+				5A867DFA2236491F00011ECA /* FirstViewController.h */,
+				5A867DFB2236491F00011ECA /* FirstViewController.m */,
+				5A867DFD2236492700011ECA /* SecondViewController.h */,
+				5A867DFE2236492700011ECA /* SecondViewController.m */,
 				5A867DCB223648B500011ECA /* Main.storyboard */,
 				5A867DCE223648B600011ECA /* Assets.xcassets */,
 				5A867DD0223648B600011ECA /* LaunchScreen.storyboard */,
@@ -262,9 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A867DFF2236492700011ECA /* SecondViewController.m in Sources */,
 				5A867DCA223648B500011ECA /* ViewController.m in Sources */,
 				5A867DD5223648B600011ECA /* main.m in Sources */,
 				5A867DC7223648B500011ECA /* AppDelegate.m in Sources */,
+				5A867DFC2236491F00011ECA /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +448,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P69WDNEKFF;
 				INFOPLIST_FILE = TestUIViewAnimationCPUEnergy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +466,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P69WDNEKFF;
 				INFOPLIST_FILE = TestUIViewAnimationCPUEnergy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
