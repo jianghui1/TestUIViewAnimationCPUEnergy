@@ -35,20 +35,20 @@
 2. 为了使返回的时候，动画继续进行，对代码进行了部分改造：
 
 
-    - (void)startAction
-    {
-        CGFloat x = 0;
-        if (self.redView.frame.origin.x != 375) {
-            x = 375;
+        - (void)startAction
+        {
+            CGFloat x = 0;
+            if (self.redView.frame.origin.x != 375) {
+                x = 375;
+            }
+            [UIView animateWithDuration:5 animations:^{
+                self.redView.frame = CGRectMake(x, self.redView.frame.origin.y, self.redView.frame.size.width, self.redView.frame.size.height);
+            } completion:^(BOOL finished) {
+        //        if (finished) {
+                    [self startAction];
+        //        }
+            }];
         }
-        [UIView animateWithDuration:5 animations:^{
-            self.redView.frame = CGRectMake(x, self.redView.frame.origin.y, self.redView.frame.size.width, self.redView.frame.size.height);
-        } completion:^(BOOL finished) {
-    //        if (finished) {
-                [self startAction];
-    //        }
-        }];
-    }
     
 这样的话，返回的时候动画就不会停止，但是，问题也就出现了。此时的 app 运行状态如图。
 
@@ -59,25 +59,25 @@
 3. 为了解决以上两种问题，继续对代码进行改造。
 
     
-     - (void)startAction
-    {
-        CGFloat x = 0;
-        if (self.redView.frame.origin.x != 375) {
-            x = 375;
-        }
-        [UIView animateWithDuration:5 animations:^{
-            self.redView.frame = CGRectMake(x, self.redView.frame.origin.y, self.redView.frame.size.width, self.redView.frame.size.height);
-        } completion:^(BOOL finished) {
-            if (finished) {
-                [self startAction];
+         - (void)startAction
+        {
+            CGFloat x = 0;
+            if (self.redView.frame.origin.x != 375) {
+                x = 375;
             }
-        }];
-    }
-    
-    - (void)viewWillAppear:(BOOL)animated
-    {
-        [self startAction];
-    }
+            [UIView animateWithDuration:5 animations:^{
+                self.redView.frame = CGRectMake(x, self.redView.frame.origin.y, self.redView.frame.size.width, self.redView.frame.size.height);
+            } completion:^(BOOL finished) {
+                if (finished) {
+                    [self startAction];
+                }
+            }];
+        }
+
+        - (void)viewWillAppear:(BOOL)animated
+        {
+            [self startAction];
+        }
     
 app运行状态如图。
 
