@@ -13,20 +13,20 @@
 1. 一般情况下，没有什么问题：
 
     
-    - (void)startAction
-    {
-        CGFloat x = 0;
-        if (self.redView.frame.origin.x != 375) {
-            x = 375;
+        - (void)startAction
+        {
+            CGFloat x = 0;
+            if (self.redView.frame.origin.x != 375) {
+                x = 375;
+            }
+            [UIView animateWithDuration:5 animations:^{
+                self.redView.frame = CGRectMake(x, self.redView.frame.origin.y, self.redView.frame.size.width, self.redView.frame.size.height);
+            } completion:^(BOOL finished) {
+                if (finished) {
+                    [self startAction];
+                }µ
+            }];
         }
-        [UIView animateWithDuration:5 animations:^{
-            self.redView.frame = CGRectMake(x, self.redView.frame.origin.y, self.redView.frame.size.width, self.redView.frame.size.height);
-        } completion:^(BOOL finished) {
-            if (finished) {
-                [self startAction];
-            }µ
-        }];
-    }
     
 这种情况下，不会有什么 cpu 电量上的问题，只是当从 `SecondViewController` 返回到 `FirstViewController` 时动画会结束。app 运行情况如图。
 
